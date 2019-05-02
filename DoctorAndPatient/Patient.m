@@ -7,7 +7,6 @@
 //
 
 #import "Patient.h"
-#import "Doctor.h"
 
 @implementation Patient
 
@@ -17,8 +16,16 @@
     if (self) {
         _age = age;
         _name = name;
+        _hasValidHealthCard = YES;
+        _symptoms = [[NSMutableSet alloc]init];
+        _medHistory = [[NSMutableArray alloc]init];
     }
     return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@", self.name];
 }
 
 @end

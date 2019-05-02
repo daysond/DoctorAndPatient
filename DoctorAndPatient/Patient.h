@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Doctor.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Patient : NSObject
-@property NSString* name;
-@property NSInteger age;
+@property (nonatomic) NSString* name;
+@property (nonatomic)NSInteger age;
+@property (nonatomic)NSString* healthCardNumber;
+@property (nonatomic)NSMutableSet* symptoms;
 @property (nonatomic) BOOL hasValidHealthCard;
-
+@property (nonatomic,readonly)NSMutableArray* medHistory;
 - (instancetype)initWithName:(NSString*) name andAge: (int) age;
 @end
 
