@@ -7,6 +7,7 @@
 //
 
 #import "Patient.h"
+#import "Doctor.h"
 
 @implementation Patient
 
